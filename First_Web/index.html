@@ -6,7 +6,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>我的第一个HTML网页</title>
-    <link rel="stylesheet" href="styles.css">
 </head>
 
          <!-- 这是页面主体 -->
@@ -16,15 +15,21 @@
     <header>
         <h1>欢迎来到我的网站</h1>
         <p>↑---这是一个一级标题---↑</p><br>
+        <hr><br>
         <nav>
             <ul>
                 <li><a href="https://www.bilibili.com/video/BV1GJ411x7h7" target="_blank">这是一个外部链接，在新标签页中打开
                 </a>
                 <li><a href="#1">跳转到本页的不同位置（锚点跳转）</a></li>
-                <li><a href="jump.html">跳转到不同页面</a></li>
+                <li><a href="./jump_pages/jump.html">跳转到不同页面</a></li>
+                <li><a href="./jump_pages/image.html">跳转到图片页面</a></li>
+                <li><a href="./jump_pages/lists.html">跳转到列表页面</a></li>
+                <li><a href="./jump_pages/tables.html">跳转到表格页面</a></li>
+                <li><a href="./jump_pages/forms.html">跳转到表单页面</a></li>
             </ul>
         </nav>
         <p>↑---这是一个导航栏---↑</p><br>
+        <hr><br>
     </header>
 
          <!-- 这是页面主要内容 -->
@@ -32,10 +37,26 @@
         <section>
             <h2>主要内容</h2>
             <p>↑---这是一个二级标题---↑</p><br>
-            <p>这是网站的主要内容区域。</p>
-            <p>这是一个段落，包含<strong>粗体（语义强调）</strong>，<b>粗体（非语义强调）</b>和<em>斜体（语义强调）</em>，<i>斜体（非语义强调）</i>。</p>
+            <p><b>这是网站的主要内容区域。</b></p><br>
+            <p>这是一个段落，包含<strong>粗体（语义强调）</strong>，<b>粗体（非语义强调）</b>,<em>斜体（语义强调）</em>，<i>斜体（非语义强调）</i>,<u>下划线文本</u>,<s>删除线文本</s>,<mark>高亮文本</mark>,<small>小号文本</small>。</p>
+        </section><br>
+
+        <section>
+<blockquote>
+    <li><p>生活就像一盒巧克力，你永远不知道下一颗是什么味道。</p></li>
+    <footer>— 电影《阿甘正传》</footer>
+
+    <pre><code>
+<li>function greet(name) {
+    return "Hello, " + name + "!";
+}</li>
+</code></pre>
+</blockquote>
+    <p>↑---这是一个块引用---↑</p>
         </section>
+
     </main><br>
+         <hr><br>
 
          <!-- 这是页面页脚 -->
     <footer>

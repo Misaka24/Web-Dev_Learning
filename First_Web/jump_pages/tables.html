@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>表格页面</title>
+    </head>
+    <body>
+          <h2>简单表格</h2>
+   <table border="1">
+       <thead>
+           <tr>
+               <th>姓名</th>
+               <th>年龄</th>
+               <th>班级</th>
+           </tr>
+       </thead>
+       <tbody>
+           <tr>
+               <td>张三</td>
+               <td>20</td>
+               <td>计算机科学1班</td>
+           </tr>
+           <tr>
+               <td>李四</td>
+               <td>21</td>
+               <td>软件工程2班</td>
+           </tr>
+       </tbody>
+   </table>
+   
+   <h2>合并单元格的表格</h2>
+   <table border="1">
+       <tr>
+           <th colspan="2">个人信息</th>
+       </tr>
+       <tr>
+           <td>姓名</td>
+           <td>张三</td>
+       </tr>
+       <tr>
+           <td rowspan="2">联系方式</td>
+           <td>手机：13800138000</td>
+       </tr>
+       <tr>
+           <td>邮箱：zhangsan@example.com</td>
+       </tr>
+   </table>
+    </body>
