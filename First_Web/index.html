@@ -1,76 +1,120 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
-         <!-- 这是页面头部 -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的第一个HTML网页</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>我的第一个HTML网页</title>
+<style>
+#user-info { position: fixed; top: 10px; right: 10px; background: #f1f1f1; padding: 8px 12px; border-radius: 8px; cursor: pointer; box-shadow: 0 0 5px rgba(0,0,0,0.15); font-size: 14px; display: none; }
+</style>
 </head>
-
-         <!-- 这是页面主体 -->
 <body>
-
-         <!-- 这是页面头部 -->
-    <header>
-        <h1>欢迎来到我的网站</h1>
-        <p>↑---这是一个一级标题---↑</p><br>
-        <hr><br>
-        <nav>
-            <ul>
-                <li><a href="https://www.bilibili.com/video/BV1GJ411x7h7" target="_blank">这是一个外部链接，在新标签页中打开
-                </a>
-                <li><a href="#1">跳转到本页的不同位置（锚点跳转）</a></li>
-                <li><a href="./jump_pages/jump.html">跳转到不同页面</a></li>
-                <li><a href="./jump_pages/image.html">跳转到图片页面</a></li>
-                <li><a href="./jump_pages/lists.html">跳转到列表页面</a></li>
-                <li><a href="./jump_pages/tables.html">跳转到表格页面</a></li>
-                <li><a href="./jump_pages/forms.html">跳转到表单页面</a></li>
-            </ul>
-        </nav>
-        <p>↑---这是一个导航栏---↑</p><br>
-        <hr><br>
-    </header>
-
-         <!-- 这是页面主要内容 -->
-    <main>
-        <section>
-            <h2>主要内容</h2>
-            <p>↑---这是一个二级标题---↑</p><br>
-            <p><b>这是网站的主要内容区域。</b></p><br>
-            <p>这是一个段落，包含<strong>粗体（语义强调）</strong>，<b>粗体（非语义强调）</b>,<em>斜体（语义强调）</em>，<i>斜体（非语义强调）</i>,<u>下划线文本</u>,<s>删除线文本</s>,<mark>高亮文本</mark>,<small>小号文本</small>。</p>
-        </section><br>
-
-        <section>
+<header>
+<h1>欢迎来到我的网站</h1>
+<p>↑---这是一个一级标题---↑</p><br>
+<hr><br>
+<nav>
+<ul>
+<li><a href="https://www.bilibili.com/video/BV1GJ411x7h7" target="_blank">这是一个外部链接，在新标签页中打开</a></li>
+<li><a href="#1">跳转到本页的不同位置（锚点跳转）</a></li>
+<li><a href="./jump_pages/jump.html">跳转到不同页面</a></li>
+<li><a href="./jump_pages/image.html">跳转到图片页面</a></li>
+<li><a href="./jump_pages/lists.html">跳转到列表页面</a></li>
+<li><a href="./jump_pages/tables.html">跳转到表格页面</a></li>
+</ul>
+</nav>
+<p>↑---这是一个导航栏---↑</p><br>
+<hr><br>
+</header>
+<main>
+<section>
+<h2>主要内容</h2>
+<p>↑---这是一个二级标题---↑</p><br>
+<div id="login-section">
+<h2>用户登录</h2>
+<form id="login-form">
+<div>
+<label for="username">用户名：</label>
+<input type="text" id="username" name="username" required />
+</div>
+<br />
+<div>
+<label for="password">密码：</label>
+<input type="password" id="password" name="password" required />
+</div>
+<br />
+<input type="submit" value="登录" />
+</form>
+<p id="register-link">还没有账号？<a href="./jump_pages/register.html">去注册</a></p><br>
+</div>
+<p><b>这是网站的主要内容区域。</b></p><br>
+<p>这是一个段落，包含<strong>粗体（语义强调）</strong>，<b>粗体（非语义强调）</b>,<em>斜体（语义强调）</em>,
+<i>斜体（非语义强调）</i>,<u>下划线文本</u>,<s>删除线文本</s>,<mark>高亮文本</mark>,<small>小号文本</small>。</p>
+</section><br>
+<section>
 <blockquote>
-    <li><p>生活就像一盒巧克力，你永远不知道下一颗是什么味道。</p></li>
-    <footer>— 电影《阿甘正传》</footer>
-
-    <pre><code>
+<li><p>生活就像一盒巧克力，你永远不知道下一颗是什么味道。</p></li>
+<footer>— 电影《阿甘正传》</footer>
+<pre><code>
 <li>function greet(name) {
     return "Hello, " + name + "!";
 }</li>
 </code></pre>
 </blockquote>
-    <p>↑---这是一个块引用---↑</p>
-        </section>
+<p>↑---这是一个块引用---↑</p>
+</section>
+</main><br>
+<hr><br>
+<footer>
+<p>&copy; 2025 我的网站. 保留所有权利。</p>
+<p>↑---这是一个页脚---↑</p>
+</footer>
 
-    </main><br>
-         <hr><br>
+<div id="user-info"></div>
 
-         <!-- 这是页面页脚 -->
-    <footer>
-        <p>&copy; 2025 我的网站. 保留所有权利。</p>
-        <p>↑---这是一个页脚---↑</p>
-    </footer>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+const userInfoDiv = document.getElementById("user-info");
+const loginSection = document.getElementById("login-section");
+const user = localStorage.getItem("user");
+if (user) {
+const { username } = JSON.parse(user);
+loginSection.style.display = "none";
+userInfoDiv.style.display = "block";
+userInfoDiv.textContent = `欢迎，${username}`;
+userInfoDiv.addEventListener("click", () => {
+window.location.href = "./jump_pages/profile.html";
+});
+}
 
-         <!--插入了一大段空白行-->
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    
-    <script src="script.js"></script>
+const loginForm = document.getElementById("login-form");
+loginForm.addEventListener("submit", async (e) => {
+e.preventDefault();
+const username = document.getElementById("username").value.trim();
+const password = document.getElementById("password").value.trim();
+try {
+const res = await fetch("/login", {
+method: "POST",
+headers: {"Content-Type":"application/json"},
+body: JSON.stringify({ username, password })
+});
+const data = await res.json();
+if (res.ok && data.success) {
+localStorage.setItem("user", JSON.stringify(data.user));
+alert("登录成功！");
+window.location.reload();
+} else {
+alert("登录失败：" + (data.message || "请检查用户名或密码"));
+}
+} catch (err) {
+alert("请求出错：" + err);
+}
+});
+});
+</script>
 
-        <section id="1">
-            <h2>这里是本页跳转内容</h2>
-        </section>
+<section id="1">
+<h2>这里是本页跳转内容</h2>
+</section>
 </body>
 </html>

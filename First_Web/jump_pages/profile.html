@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>个人信息</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #4a90e2;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 0 0 10px 10px;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    #logout {
+      background: #ff5555;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.2s;
+    }
+
+    #logout:hover {
+      background: #cc0000;
+    }
+
+    main {
+      margin-top: 40px;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .info-item {
+      margin: 10px 0;
+    }
+
+    a.back {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #4a90e2;
+      font-weight: bold;
+    }
+
+    a.back:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>个人信息</h1>
+    <button id="logout">退出登录</button>
+  </header>
+
+  <main>
+    <div id="user-info">
+      <p class="info-item"><strong>用户名：</strong><span id="username-display"></span></p>
+      <p class="info-item"><strong>邮箱：</strong><span id="email-display"></span></p>
+      <p class="info-item"><strong>性别：</strong><span id="gender-display"></span></p>
+      <p class="info-item"><strong>爱好：</strong><span id="hobbies-display"></span></p>
+      <p class="info-item"><strong>个人简介：</strong><span id="bio-display"></span></p>
+    </div>
+    <a class="back" href="../index.html">← 返回首页</a>
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const userData = localStorage.getItem("user");
+      if (!userData) {
+        alert("您尚未登录，请先登录！");
+        window.location.href = "../index.html";
+        return;
+      }
+
+      const user = JSON.parse(userData);
+      document.getElementById("username-display").textContent = user.username || '';
+      document.getElementById("email-display").textContent = user.email || '';
+      document.getElementById("gender-display").textContent = user.gender || '';
+      document.getElementById("hobbies-display").textContent = (user.hobbies || []).join(", ");
+      document.getElementById("bio-display").textContent = user.bio || '';
+    });
+
+    document.getElementById("logout").addEventListener("click", () => {
+      localStorage.removeItem("user");
+      alert("已退出登录");
+      window.location.href = "../index.html";
+    });
+  </script>
+</body>
+</html>
